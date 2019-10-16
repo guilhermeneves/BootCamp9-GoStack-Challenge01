@@ -8,7 +8,7 @@ server.use(express.json()); // Plugin para Express entender JSON
 // Route params = /users/1
 // Request body = {"name": "Guilherme"} ** payload
 // CRUD - Create, Read, Update, Delete
-const users = ['Diego','Claudio','Pedro'];
+const users = ['Diego','Guilherme','Pedro'];
 
 function checkUserExists(req, res, next){
   if(!req.body.name){
@@ -79,4 +79,4 @@ server.delete('/users/:index', checkUserInArray, (req, res) => {
   //return res.json(users);
 });
 
-server.listen(3000);
+server.listen(3333);
