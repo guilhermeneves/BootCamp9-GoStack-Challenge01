@@ -9,6 +9,7 @@ var receivedRequests = 0;
 
 function checkProjectExists(req, res, next){
   const { id } = req.params;
+  
   projectIndex = projects.findIndex(x => x.id == id)
   projectExist = projectIndex != -1;
 
@@ -23,6 +24,7 @@ function checkProjectExists(req, res, next){
 
 function checkProjectNotExists(req, res, next){
   const { id } = req.body;
+  
   projectIndex = projects.findIndex(x => x.id == id);
   projectExist = projectIndex != -1;
 
